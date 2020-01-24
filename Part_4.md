@@ -1,0 +1,10 @@
+# Part 4 - Questions
+
+##
+1) The Database northwind_small.sqlite3 contains a series of tables, two of which are the Employee and the Territory tables.  The primary frame of this dataset is relational, indicating that the tables within exist such that they can be joined together within the database to answer questions regarding information existing in both tables.  Specifically, the relationship between Employee and Territory is called a one-to-one relationship because the Employee table shares only one column with the Territory Table, the RegionID column.
+
+##
+2) Document Stores are not appropriate in situations where multiple datasets (as tables) are being utilized in a relational manner.  One example is data in the DMV, where different tables may contain information regarding different datasets collected by Department of Motor Vehicles.  Document Stores like MongoDB would be more appropriate in situations where the metadata requires changing or manipulation.  For instance, in relational database management systems the schema is fixed and if changing the database needs to change in it's entirety-with respect to the schema.  In document stores the schema can change, and be dynamic in general.  A document store allows for the data storage to exist in non-uniform sizes as well, which should allow for this dynamism.  
+
+##
+3) NewSQL refers to, a not so new, form of NoSQL.  NewSQL utilizes NoSQL's ability to scale and thus allowing for cost cutting through minimization of infrastructure while maintaining the ACID guarantees.  What this means is that NewSQL becomes useful for high volume transactions, because it contains indexed data (like NoSQL) which is easily retrievable and also maintains any committed transactions across the database.  In traditional NoSQL, transactions have no real ACID guarantee; in case of a power shut off, or any other interference to a transaction, the database maintains the last committed transaction.  Essentially, what NewSQL is attempting to achieve is provide industries dealing with high volume online transactions a more cost effective database with ACID guarantees.
