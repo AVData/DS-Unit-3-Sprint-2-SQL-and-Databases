@@ -1,12 +1,14 @@
 import sqlite3
 
-conn = sqlite3.connect('rpg_db.sqlite3')
-curs = conn.cursor()
+conn = sqlite3.connect('rpg_db.sqlite3') # Connetion to database created
+curs = conn.cursor()                     # Curser instatiated as curs for db
 
 query_count = '''SELECT COUNT(DISTINCT name)
-FROM charactercreator_character;'''
+FROM charactercreator_character;''' # Queries are created similarly
+                                    # to docstrins, in that they live in the '''
 
-curs.execute(query_count)
+curs.execute(query_count)           # In order to execute a query in a db, use
+                                    # method .execute(qurey_var)
 
 results = curs.fetchall()
 
