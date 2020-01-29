@@ -10,13 +10,22 @@ FROM charactercreator_character;''' # Queries are created similarly
 curs.execute(query_count)           # In order to execute a query in a db, use
                                     # method .execute(qurey_var)
 
-results = curs.fetchall()
+results = curs.fetchall()           # The method .fetchall() returns the results
+                                    # from the executed query. Here we are setting
+                                    # it as the var 'results'
 
-print('\n', 'Total characters: ', results)
+print('\n', 'Total characters: ', results)  # But in order to acutally see your
+                                            # query in your terminal, you need
+                                            # to do a print function.
 
+
+# the following code is a reitteation of the above.  See below to know how to
+# commit this to your db and exit.
 
 query_subclass = '''SELECT COUNT(DISTINCT character_id)
 FROM charactercreator_character_inventory;'''
+
+
 
 curs.execute(query_subclass)
 
@@ -83,3 +92,6 @@ weapons_per_character = curs.fetchall()
 
 print('Table of first 20 rows of weapons/character: ', '\n',
 weapons_per_character, '\n')
+
+# when all of the queries above are performed you can simply do a conn.commit()
+# and a curs.exit() to exit the db.
